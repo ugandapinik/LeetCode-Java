@@ -1,7 +1,7 @@
 # Problems
 **STRING** releated problems: 
 
-**Problem-1:** maximum occurring character in an input string. 
+**Problem-1:** maximum occurring character in an input string.    
 **Solution:**   
 
 > we will use a technique called ‘Hashing’. 
