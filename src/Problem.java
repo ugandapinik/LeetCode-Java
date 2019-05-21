@@ -1,3 +1,8 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 public class Problem {
 
     private static final int ASCII_SIZE = 256;
@@ -35,8 +40,46 @@ public class Problem {
     }
 
 
+    /**
+     *
+     * @param word
+     * @return
+     */
+    public static int findLowOccuraingCharacter(String word){
+        int[] count = new int[ASCII_SIZE];
+        int index = -1;
+
+        for (int i = 0; i < word.length(); i++){
+            count[word.charAt(i)]++;
+        }
+        // finding the length of the word
+        for (int i = 0; i < word.length(); i++){
+
+            if (count[word.charAt(i)] == 1){
+                index = i;
+                break;
+            }
+
+        }
+
+        return index;
+
+    }
 
 
+    /**
+     *
+     **Problem-2:** check if two String are Anagram
+     example: "slient" = "listen", "mary" = "army"
+     **Solution:**
+
+     > First check the length both word.
+     > Compare both word.
+
+     * @param word
+     * @param anagram
+     * @return
+     */
     public static boolean isAnagram(String word, String anagram){
         // check the length of these two files
         if (word.length() != anagram.length())
@@ -54,7 +97,28 @@ public class Problem {
             }
         }
 
-
         return anagram.isEmpty();
+    }
+
+
+    /**
+     * Problem-4:** Reverse a string
+     * example: "geeksforgeeks" = "skeegrofskeeg"
+     *
+     *
+     * 1. First, convert String to character array
+     *    by using the built in Java String class
+     *    method toCharArray().
+     * 2. Then, scan the string from end  to start,
+     *    and print the character one by one.
+     *
+     * @param word
+     */
+    public static void reverseString(String word) {
+        char[] characters = word.toCharArray();
+
+        for (int i = characters.length - 1; i >= 0; i--){
+            System.out.print(characters[i]);
+        }
     }
 }
