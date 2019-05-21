@@ -12,3 +12,24 @@ Typically, ASCII characters are 256, so we use our Hash array size as 256. But i
 
 **Time Complexity: O(n)**   
 **Space Complexity: O(1)** — Because we are using fixed space (Hash array) irrespective of input string size.
+
+
+---
+
+
+**Problem-2:** check if two String are Anagram   
+example: "slient" = "listen", "mary" = "army"   
+**Solution:**  
+
+> First check the length both word.   
+> Compare both word.     
+
+```pesudo
+for 1 to length of string
+    index = anagram.indexOf(i)
+    if index != -1 then
+        anagram = anagram.substring(0, index) + anagram.substring(index + 1, string end)
+    
+```
+
+**Time Complexity: O(n)** 

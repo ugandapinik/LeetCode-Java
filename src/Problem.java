@@ -33,4 +33,28 @@ public class Problem {
 
         return max;
     }
+
+
+
+
+    public static boolean isAnagram(String word, String anagram){
+        // check the length of these two files
+        if (word.length() != anagram.length())
+            return false;
+
+
+        char[] characters = word.toCharArray();
+        for (char c: characters){
+            // check every character and match
+            int index = anagram.indexOf(c);
+            if (index != -1){
+                anagram = anagram.substring(0, index) + anagram.substring(index + 1, anagram.length());
+            }else{
+                return false;
+            }
+        }
+
+
+        return anagram.isEmpty();
+    }
 }
