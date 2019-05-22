@@ -77,3 +77,15 @@ example: "geeksforgeeks" = "skeegrofskeeg"
 **Time Complexity: O(n)** 
 
 ---
+
+
+**Problem-5:** All permuations of a given string 
+example: "abc" = "abc...acb..bac..etc"
+**Solution:**    
+
+**Time Complexity:** O(n*n!) Note that there are n! permutations and it requires O(n) time to print a a permutation. 
+
+---
+
+
+

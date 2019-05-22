@@ -121,4 +121,120 @@ public class Problem {
             System.out.print(characters[i]);
         }
     }
+
+
+    /**
+     * Find the duplicate characters in a string
+     * @param word
+     */
+    public static void duplicateCharacter(String word){
+        HashMap<Character, Integer> map = new HashMap<>();
+        char[] characters = word.toCharArray();
+
+        for (Character ch: characters){
+            // if there is a key then
+            if (map.containsKey(ch)){
+                map.put(ch, map.get(ch) + 1);
+            }else{
+                map.put(ch, 1);
+            }
+        }
+
+        Set<Map.Entry<Character, Integer>> entrySet = map.entrySet();
+        for (Map.Entry<Character, Integer> entry: entrySet){
+            if (entry.getValue() > 1){
+                System.out.println(entry.getKey() + ":" + entry.getValue());
+            }
+
+        }
+
+    }
+
+
+    /**
+     * Find vowels in a string
+     *
+     */
+    public static void findVowels(String string){
+        int count = 0;
+        if (string.isEmpty()){
+            return;
+        }
+
+
+        char[] characters = string.toCharArray();
+        for (int i = 0; i < characters.length; i++){
+            switch (characters[i]){
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    count++;
+                    break;
+                default:
+                    // no increment on count
+            }
+        }
+
+        System.out.println("Number of vowels: " + count);
+
+    }
+
+
+
+
+    public static void occurrenceCharacter(String word, char character){
+        int occurrence = 0;
+        char[] characters = word.toCharArray();
+        for (Character ch: characters){
+            if (ch.equals(character)){
+                occurrence++;
+            }
+        }
+
+        System.out.println("Occurrance: " + occurrence);
+    }
+
+
+    public static void encodeBlankSpace(String sentence, String encode){
+        char[] characters = sentence.toCharArray();
+
+        for (int i = 0; i < characters.length; i++){
+            if (characters[i] == ' '){
+                ;
+
+            }
+        }
+
+    }
+
+
+    /**
+     * Permutation & Combination
+     * ===============================================
+     */
+
+    public static void permute(String str, int l, int r) {
+        if (l == r)
+            System.out.println(str);
+        else {
+            for (int i = l; i <= r; i++) {
+                str = swap(str,l,i);
+                permute(str, l+1, r);
+                str = swap(str,l,i);
+            }
+        }
+    }
+
+    public static String swap(String a, int i, int j) {
+        char temp;
+        char[] charArray = a.toCharArray();
+        temp = charArray[i] ;
+        charArray[i] = charArray[j];
+        charArray[j] = temp;
+        return String.valueOf(charArray);
+    }
+
+
 }
