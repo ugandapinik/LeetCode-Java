@@ -38,30 +38,9 @@ for 1 to length of string
 ---
 
 
-**Problem-2:** check if two String are Anagram   
-example: "slient" = "listen", "mary" = "army"   
-**Solution:**  
 
-> First check the length both word.   
-> Compare both word.     
-
-```pesudo
-for 1 to length of string
-    index = anagram.indexOf(i)
-    if index != -1 then
-        anagram = anagram.substring(0, index) + anagram.substring(index + 1, string end)
-    
-```
-
-**Time Complexity: O(n)** 
-
-
----
-
-
-
-**Problem-3:** 
-example: "ssampleee" = "a"
+**Problem-3:**  Find the non-occur value in a word
+example: "ssampleee" = "a"   
 **Solution:**    
 
 
