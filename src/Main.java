@@ -31,11 +31,13 @@ public class Main {
          *  ===================================================
          */
 
-        String str = "ABC";
-        int length = str.length();
+        //String str = "ABC";
+        //int length = str.length();
 
-        Problem.permute(str, 0, length - 1);
+        //Problem.permute(str, 0, length - 1);
 
+
+        Problem.palindrom("radar");
 
 
     }

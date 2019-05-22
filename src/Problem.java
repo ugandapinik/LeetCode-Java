@@ -237,4 +237,27 @@ public class Problem {
     }
 
 
+
+
+
+    public static boolean palindrom(String word){
+        char[] characters = word.toCharArray();
+
+        int i1 = 0;
+        int i2 = characters.length - 1;
+
+        while (i2 > i1){
+            if (characters[i1] != characters[i2]){
+                System.out.println("Not Palindrom");
+                return false;
+            }
+
+            ++i1;
+            --i2;
+        }
+
+        System.out.println("Palindrom");
+        return true;
+    }
+
 }
