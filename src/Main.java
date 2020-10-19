@@ -40,6 +40,17 @@ public class Main {
         Problem.palindrom("radar");
 
 
+        /**
+         *  ===================================================
+         *              Reverse a given number
+         *  ===================================================
+         */
+
+        ReverseNumber reverseNumber = new ReverseNumber();
+        int reverse = reverseNumber.reverse(101010);
+        System.out.println(reverse);
+
+
     }
 
 }
